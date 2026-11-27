@@ -144,11 +144,19 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
 .stay a { font-weight: 700; overflow-wrap: anywhere; }
 .stay-meta { font-size: .82rem; color: var(--sub); }
 .budget { margin-top: 20px; }
-.table-scroll { overflow-x: auto; }
-.budget table { width: 100%; }
-.budget td:nth-child(2), .budget tfoot td { white-space: nowrap; font-weight: 700; }
+.table-scroll { width: 100%; overflow: visible; }
+.budget table { width: 100%; table-layout: fixed; }
+.budget th, .budget td { padding: .52rem .3rem; vertical-align: top; white-space: normal; overflow-wrap: anywhere; text-align: left; }
+.budget th:first-child { width: 27%; }
+.budget th:nth-child(2) { width: 25%; }
+.budget th:last-child { width: 48%; }
+.budget td:nth-child(2), .budget tfoot td { font-weight: 700; }
 .budget tfoot { background: #e9eddf; }
 .budget-note { font-size: .82rem; color: var(--sub); }
+@media (max-width: 590px) {
+  .budget table { font-size: .78rem; }
+  .budget th, .budget td { padding: .48rem .18rem; }
+}
 
 .stay-alternatives { margin-top: 8px; padding-top: 9px; border-top: 1px solid var(--edge); display: grid; gap: 5px; }
 .stay-alternatives > span { font-size: .78rem; font-weight: 700; color: var(--green); }
