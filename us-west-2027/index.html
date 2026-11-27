@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="2027 美國西部 12 天自駕行程，從洛杉磯前往死亡谷、拉斯維加斯和大峽谷南緣。附 Google Maps 導航與國家公園實景照。">
 <meta name="theme-color" content="#211b16">
-<title>2027 美國西部自駕｜12 天行程</title>
 <link rel="icon" type="image/png" href="west-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="west-icon.png">
+<link rel="apple-touch-icon" href="west-icon.png">
+<title>2027 美國西部自駕｜12 天行程</title>
 <style>
 :root {
   color-scheme: light;
@@ -141,6 +141,17 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
   main { padding-block: 12px; }
   .day, .plan { break-inside: avoid; }
 }
+
+.stay { margin: 12px 0 2px; padding: 12px 15px; border: 1px solid var(--edge); border-left: 4px solid var(--green); border-radius: 10px; background: #f8f5ed; display: grid; gap: 2px; }
+.stay-label { font-size: .76rem; font-weight: 700; color: var(--green); }
+.stay a { font-weight: 700; overflow-wrap: anywhere; }
+.stay-meta { font-size: .82rem; color: var(--sub); }
+.budget { margin-top: 20px; }
+.table-scroll { overflow-x: auto; }
+.budget table { width: 100%; }
+.budget td:nth-child(2), .budget tfoot td { white-space: nowrap; font-weight: 700; }
+.budget tfoot { background: #e9eddf; }
+.budget-note { font-size: .82rem; color: var(--sub); }
 </style>
 </head>
 <body id="top">
@@ -183,6 +194,25 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
       </table>
     </section>
   </div>
+
+  <section class="panel budget" id="budget" aria-labelledby="budget-title">
+    <h2 id="budget-title">旅費預估總表｜2 大 1 小</h2>
+    <p>2027/3/26–4/6，洛杉磯取還 Tesla Model Y。<strong>購物不列入旅費。</strong>以 NT$32 萬作規劃基準，預留到約 NT$35 萬較從容。</p>
+    <div class="table-scroll"><table>
+      <thead><tr><th scope="col">項目</th><th scope="col">全家預估</th><th scope="col">估算說明</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">直飛來回機票</th><td>NT$9–10 萬</td><td>3 人；每人約 NT$3 萬為原行程參考價</td></tr>
+        <tr><th scope="row">住宿 10 晚</th><td>NT$8–8.3 萬</td><td>四段可取消房價共 NT$71,200，另預留網站未含稅費</td></tr>
+        <tr><th scope="row">Model Y 租車</th><td>NT$4.5–6.5 萬</td><td>約 10–11 天，含稅費、保障方案估算；尚無指定日期報價</td></tr>
+        <tr><th scope="row">充電、停車</th><td>NT$1.2–2.2 萬</td><td>跨州自駕超充、飯店與景點停車</td></tr>
+        <tr><th scope="row">餐食</th><td>NT$4.5–6 萬</td><td>3 人全程用餐</td></tr>
+        <tr><th scope="row">國家公園、景點</th><td>約 NT$0.9–1 萬</td><td>以非居民年度通行證 US$250、Getty 停車等估算</td></tr>
+        <tr><th scope="row">ESTA、雜支</th><td>NT$0.8–1.4 萬</td><td>簽證授權、過路費及零星支出</td></tr>
+      </tbody>
+      <tfoot><tr><th scope="row">旅費合計</th><td>約 NT$29–35 萬</td><td>規劃基準 NT$32 萬；不含任何購物</td></tr></tfoot>
+    </table></div>
+    <p class="budget-note">住宿是 2026/11/27 查詢 Booking.com 的兩大一小、一房、指定日期可免費取消方案；以上沒有預訂，價格與取消期限以結帳頁為準。Park MGM、大峽谷飯店與 Santa Monica Hotel 的度假村費已列入上述住宿報價，但稅、Santa Monica Hotel 旅遊費與部分停車費另計。租 Model Y 前請確認總里程額度與超額里程費；國家公園及 ESTA 費率於出發前再確認。</p>
+  </section>
   <section id="itinerary" aria-labelledby="itinerary-title">
     <header class="section-head">
       <p class="eyebrow">Day by day</p>
@@ -197,6 +227,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-1">桃園出發，飛往洛杉磯</h3>
         <p class="day-copy">下午請假，搭桃園晚間直飛。若機票是 3/26 深夜起飛，通常是洛杉磯當地 3/26 傍晚抵達，當天取車、入住。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan+Taoyuan+International+Airport" target="_blank" rel="noopener noreferrer" class="map">桃園國際機場</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Los+Angeles+International+Airport%2C+CA" target="_blank" rel="noopener noreferrer" class="map">洛杉磯國際機場</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・3/26–3/30・4 晚</span><a href="https://www.booking.com/hotel/us/four-points-by-sheraton-los-angeles-westside.html?checkin=2027-03-26&amp;checkout=2027-03-30&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Four Points by Sheraton Los Angeles Westside ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$26,471（未含另計稅費）｜3/24 前免費取消</span></aside>
         
         
       </div>
@@ -208,6 +239,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-2">入住後放慢步調</h3>
         <p class="day-copy">在飯店附近用餐、散步，留一天調整時差。若最後訂到桃園 3/27 凌晨起飛的航班，再依票面日期安排取車及入住。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Los+Angeles%2C+CA" target="_blank" rel="noopener noreferrer" class="map">洛杉磯</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Los+Angeles+International+Airport%2C+CA" target="_blank" rel="noopener noreferrer" class="map">洛杉磯國際機場</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・3/26–3/30・4 晚</span><a href="https://www.booking.com/hotel/us/four-points-by-sheraton-los-angeles-westside.html?checkin=2027-03-26&amp;checkout=2027-03-30&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Four Points by Sheraton Los Angeles Westside ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$26,471（未含另計稅費）｜3/24 前免費取消</span></aside>
         
         
       </div>
@@ -219,6 +251,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-3">天文台、RRL 購物與比佛利山莊</h3>
         <p class="day-copy">上午走訪格里斐斯天文台，接著到 Melrose Avenue 的 Double RL（RRL）逛街，最後到比佛利山莊散步。RRL 週日通常 11:00–18:00 營業；當天為復活節，出發前請再確認假日營業時間。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Griffith+Observatory%2C+Los+Angeles%2C+CA" target="_blank" rel="noopener noreferrer" class="map">格里斐斯天文台</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Double+RL%2C+8150+Melrose+Ave%2C+Los+Angeles%2C+CA+90046" target="_blank" rel="noopener noreferrer" class="map">Double RL（8150 Melrose Ave）</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Beverly+Hills%2C+CA" target="_blank" rel="noopener noreferrer" class="map">比佛利山莊</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・3/26–3/30・4 晚</span><a href="https://www.booking.com/hotel/us/four-points-by-sheraton-los-angeles-westside.html?checkin=2027-03-26&amp;checkout=2027-03-30&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Four Points by Sheraton Los Angeles Westside ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$26,471（未含另計稅費）｜3/24 前免費取消</span></aside>
         <p class="day-note"><a href="https://www.ralphlauren.com/locations/US/Los%20Angeles/8039" target="_blank" rel="noopener noreferrer">RRL 官方門市與營業時間</a></p>
         
         
@@ -231,6 +264,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-4">聖莫尼卡海岸散步</h3>
         <p class="day-copy">逛聖莫尼卡碼頭，沿海灘慢走，留時間吃飯和休息。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Santa+Monica+Pier%2C+CA" target="_blank" rel="noopener noreferrer" class="map">聖莫尼卡碼頭</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Santa+Monica+State+Beach%2C+Santa+Monica%2C+CA" target="_blank" rel="noopener noreferrer" class="map">聖莫尼卡海灘</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・3/26–3/30・4 晚</span><a href="https://www.booking.com/hotel/us/four-points-by-sheraton-los-angeles-westside.html?checkin=2027-03-26&amp;checkout=2027-03-30&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Four Points by Sheraton Los Angeles Westside ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$26,471（未含另計稅費）｜3/24 前免費取消</span></aside>
         
         
       </div>
@@ -242,6 +276,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-5">穿越死亡谷，夜宿拉斯維加斯</h3>
         <p class="day-copy">從洛杉磯出發，走訪惡水盆地鹽田、扎布里斯基角，再開往拉斯維加斯。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Death+Valley+National+Park%2C+CA" target="_blank" rel="noopener noreferrer" class="map">死亡谷國家公園</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Badwater+Basin%2C+Death+Valley+National+Park%2C+CA" target="_blank" rel="noopener noreferrer" class="map">惡水盆地鹽田</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Zabriskie+Point%2C+Death+Valley+National+Park%2C+CA" target="_blank" rel="noopener noreferrer" class="map">扎布里斯基角</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Vegas%2C+NV" target="_blank" rel="noopener noreferrer" class="map">拉斯維加斯</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Los+Angeles%2C+CA&amp;destination=Badwater+Basin%2C+Death+Valley+National+Park%2C+CA&amp;travelmode=driving" target="_blank" rel="noopener noreferrer" class="map driving">洛杉磯 → 惡水盆地</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Badwater+Basin%2C+Death+Valley+National+Park%2C+CA&amp;destination=Las+Vegas%2C+NV&amp;travelmode=driving&amp;waypoints=Zabriskie+Point%2C+Death+Valley+National+Park%2C+CA" target="_blank" rel="noopener noreferrer" class="map driving">惡水盆地 → 拉斯維加斯</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・3/30–4/1・2 晚</span><a href="https://www.booking.com/hotel/us/hotel-park-mgm.html?checkin=2027-03-30&amp;checkout=2027-04-01&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Park MGM Las Vegas ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$8,909（未含另計稅費）｜3/27 前免費取消</span></aside>
         <p class="day-note"><a href="https://www.nps.gov/deva/planyourvisit/conditions.htm" target="_blank" rel="noopener noreferrer">死亡谷官方路況</a></p>
         <div class="photos photos-pair"><figure class="photo">
       <a class="photo-link" href="https://www.google.com/maps/search/?api=1&amp;query=Badwater+Basin%2C+Death+Valley+National+Park%2C+CA" target="_blank" rel="noopener noreferrer" aria-label="惡水盆地鹽田 · 開啟 Google Maps">
@@ -263,6 +298,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-6">逛街、看水舞與夜景</h3>
         <p class="day-copy">白天購物或休息，晚間散步拉斯維加斯大道，欣賞百樂宮水舞與夜景。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Vegas+Strip%2C+NV" target="_blank" rel="noopener noreferrer" class="map">拉斯維加斯大道</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Fountains+of+Bellagio%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener noreferrer" class="map">百樂宮水舞</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・3/30–4/1・2 晚</span><a href="https://www.booking.com/hotel/us/hotel-park-mgm.html?checkin=2027-03-30&amp;checkout=2027-04-01&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Park MGM Las Vegas ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$8,909（未含另計稅費）｜3/27 前免費取消</span></aside>
         
         
       </div>
@@ -274,6 +310,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-7">經 66 號公路到大峽谷看日落</h3>
         <p class="day-copy">從拉斯維加斯出發，在 66 號公路老鎮塞利格曼停留，傍晚抵達大峽谷南緣，在馬瑟觀景點看日落。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Historic+Route+66%2C+Seligman%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">66 號公路・塞利格曼</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Canyon+Visitor+Center%2C+South+Rim%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">大峽谷國家公園南緣</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Mather+Point%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">馬瑟觀景點</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Las+Vegas%2C+NV&amp;destination=Grand+Canyon+Visitor+Center%2C+South+Rim%2C+AZ&amp;travelmode=driving&amp;waypoints=Historic+Route+66%2C+Seligman%2C+AZ" target="_blank" rel="noopener noreferrer" class="map driving">拉斯維加斯 → 塞利格曼 → 大峽谷</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・4/1–4/3・2 晚</span><a href="https://www.booking.com/hotel/us/holiday-inn-resort-the-squire-at-grand-canyon-by-ihg.html?checkin=2027-04-01&amp;checkout=2027-04-03&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Holiday Inn Resort Grand Canyon by IHG ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$20,026（未含另計稅費）｜3/31 下午 4:00 前免費取消</span></aside>
         
         <div class="photos"><figure class="photo">
       <a class="photo-link" href="https://www.google.com/maps/search/?api=1&amp;query=Mather+Point%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" aria-label="馬瑟觀景點的日落 · 開啟 Google Maps">
@@ -290,6 +327,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-8">大峽谷南緣走一整天</h3>
         <p class="day-copy">沿南緣步道從馬瑟觀景點走往亞瓦派地質博物館，再搭免費接駁車前往霍皮等觀景點。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rim+Trail+at+Mather+Point%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">南緣步道</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Mather+Point%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">馬瑟觀景點</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Yavapai+Geology+Museum%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">亞瓦派地質博物館</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Hopi+Point%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">霍皮觀景點</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・4/1–4/3・2 晚</span><a href="https://www.booking.com/hotel/us/holiday-inn-resort-the-squire-at-grand-canyon-by-ihg.html?checkin=2027-04-01&amp;checkout=2027-04-03&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Holiday Inn Resort Grand Canyon by IHG ↗</a><span class="stay-meta">兩張雙人床｜本段可免費取消方案 NT$20,026（未含另計稅費）｜3/31 下午 4:00 前免費取消</span></aside>
         <p class="day-note"><a href="https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm" target="_blank" rel="noopener noreferrer">南緣官方接駁路線</a></p>
         <div class="photos"><figure class="photo">
       <a class="photo-link" href="https://www.google.com/maps/search/?api=1&amp;query=Yavapai+Geology+Museum%2C+Grand+Canyon+National+Park%2C+AZ" target="_blank" rel="noopener noreferrer" aria-label="亞瓦派觀景區 · 開啟 Google Maps">
@@ -306,6 +344,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-9">大峽谷開車返回洛杉磯</h3>
         <p class="day-copy">這天以自駕移動為主，抵達洛杉磯後入住休息。台灣的兒童節與清明節連假從今天開始。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Canyon+Visitor+Center%2C+South+Rim%2C+AZ" target="_blank" rel="noopener noreferrer" class="map">大峽谷國家公園南緣</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Los+Angeles%2C+CA" target="_blank" rel="noopener noreferrer" class="map">洛杉磯</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Grand+Canyon+Visitor+Center%2C+South+Rim%2C+AZ&amp;destination=Los+Angeles%2C+CA&amp;travelmode=driving" target="_blank" rel="noopener noreferrer" class="map driving">大峽谷南緣 → 洛杉磯</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・4/3–4/5・2 晚</span><a href="https://www.booking.com/hotel/us/santa-monica-motel.html?checkin=2027-04-03&amp;checkout=2027-04-05&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Santa Monica Hotel ↗</a><span class="stay-meta">兩張床｜本段可免費取消方案 NT$15,794（未含另計稅費）｜4/2 前免費取消</span></aside>
         
         
       </div>
@@ -317,6 +356,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <h3 id="heading-10">蓋提別墅與伴手禮採買</h3>
         <p class="day-copy">改到蓋提別墅博物館看羅馬式建築、花園與古典收藏。若 4/5 搭白天班機，今天就把伴手禮買齊。</p>
         <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Getty+Villa+Museum%2C+17985+Pacific+Coast+Highway%2C+Pacific+Palisades%2C+CA" target="_blank" rel="noopener noreferrer" class="map">蓋提別墅博物館</a><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Getty+Center%2C+Los+Angeles%2C+CA" target="_blank" rel="noopener noreferrer" class="map">Getty Center（閉館）</a></div>
+        <aside class="stay" aria-label="當晚推薦住宿"><span class="stay-label">當晚住宿・4/3–4/5・2 晚</span><a href="https://www.booking.com/hotel/us/santa-monica-motel.html?checkin=2027-04-03&amp;checkout=2027-04-05&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener noreferrer">Santa Monica Hotel ↗</a><span class="stay-meta">兩張床｜本段可免費取消方案 NT$15,794（未含另計稅費）｜4/2 前免費取消</span></aside>
         <p class="day-note"><a href="https://www.getty.edu/visit/villa/" target="_blank" rel="noopener noreferrer">Getty Villa 免費預約</a>　<a href="https://www.getty.edu/about/building-gettys-future/" target="_blank" rel="noopener noreferrer">Getty Center 閉館公告</a></p>
         
       </div>
