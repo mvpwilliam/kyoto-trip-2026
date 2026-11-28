@@ -70,10 +70,11 @@ td { font-variant-numeric: tabular-nums; }
 .section-head h2 { font: 800 clamp(1.85rem, 6vw, 2.8rem)/1.25 var(--display); margin: .12em 0 .25em; }
 .section-head p { color: var(--sub); font-size: .89rem; }
 .day-nav { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin: 16px 0 21px; }
-.day-nav a { text-align: center; padding: .45rem .1rem; border: 1px solid var(--edge); border-radius: 7px; text-decoration: none; font-size: .81rem; font-weight: 750; background: var(--card); font-variant-numeric: tabular-nums; }
+.day-nav a { text-align: center; padding: .45rem .1rem; border: 1px solid var(--edge); border-radius: 999px; text-decoration: none; font-size: .81rem; font-weight: 750; background: var(--card); font-variant-numeric: tabular-nums; }
 .day-nav a:hover, .day-nav a:focus-visible { background: #f4dfc9; border-color: #ae7954; }
-.timeline { display: grid; gap: 11px; }
-.day { display: grid; grid-template-columns: 118px minmax(0, 1fr); padding: 19px 23px 21px; border: 1px solid var(--edge); border-radius: 13px; background: var(--card); scroll-margin-top: 12px; }
+.day-nav a[aria-current="date"] { color: #fff; background: var(--rust); border-color: var(--rust); }
+.timeline { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.day { display: grid; flex: 0 0 100%; min-width: 0; grid-template-columns: 118px minmax(0, 1fr); padding: 19px 23px 21px; border: 1px solid var(--edge); border-radius: 13px; background: var(--card); scroll-snap-align: start; scroll-snap-stop: always; }
 .day:target { border-color: var(--rust); box-shadow: 0 0 0 2px #c57b4b55; }
 .day-date { padding-top: .15rem; }
 .day-date span { display: block; color: var(--rust); font-size: .69rem; font-weight: 850; letter-spacing: .14em; }
@@ -129,6 +130,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .timeline { scroll-behavior: auto; }
 }
 @media print {
   .hero { color: #211b16; background: #fff; }
@@ -139,6 +141,8 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
   .route-place { color: var(--rust-dark); }
   .wrap { width: 100%; }
   main { padding-block: 12px; }
+  .timeline { display: block; overflow: visible; }
+  .day { margin-bottom: 11px; }
   .day, .plan { break-inside: avoid; }
 }
 
@@ -242,10 +246,10 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
     <header class="section-head">
       <p class="eyebrow">Day by day</p>
       <h2 id="itinerary-title">每日行程</h2>
-      <p>點選日期跳到當天。點景點名稱或照片，開啟 Google Maps。</p>
+      <p>左右滑動切換每日行程，也可點上方日期直接跳轉。點景點名稱或照片，開啟 Google Maps。</p>
     </header>
     <nav class="day-nav" aria-label="按日期跳至行程"><a href="#day-1" aria-label="第 1 天，03/26">03/26</a><a href="#day-2" aria-label="第 2 天，03/27">03/27</a><a href="#day-3" aria-label="第 3 天，03/28">03/28</a><a href="#day-4" aria-label="第 4 天，03/29">03/29</a><a href="#day-5" aria-label="第 5 天，03/30">03/30</a><a href="#day-6" aria-label="第 6 天，03/31">03/31</a><a href="#day-7" aria-label="第 7 天，04/01">04/01</a><a href="#day-8" aria-label="第 8 天，04/02">04/02</a><a href="#day-9" aria-label="第 9 天，04/03">04/03</a><a href="#day-10" aria-label="第 10 天，04/04">04/04</a><a href="#day-11" aria-label="第 11 天，04/05">04/05</a><a href="#day-12" aria-label="第 12 天，04/06">04/06</a><a href="#day-13" aria-label="第 13 天，04/07">04/07</a></nav>
-    <div class="timeline"><article class="day" id="day-1" aria-labelledby="heading-1">
+    <div class="timeline" tabindex="0" aria-label="每日行程，可左右滑動切換日期"><article class="day" id="day-1" aria-labelledby="heading-1">
       <div class="day-date"><span>DAY 01</span><time datetime="2027-03-26">03/26<small>（五）</small></time></div>
       <div class="day-body">
         <span class="tag">出發</span>
@@ -415,4 +419,57 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
         <span class="tag">抵台・休息</span>
         <h3 id="heading-13">05:25 抵達桃園，回家調整時差</h3>
         <p class="day-copy">清晨入境、領行李後返家。這天請假讓大人和孩子休息，白天接觸日光，若疲倦可短暫午睡，晚上盡量按台灣作息就寢；4/8 再上班上學。</p>
-        <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan+Taoyuan+International+Ai
+        <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan+Taoyuan+International+Airport" target="_blank" rel="noopener noreferrer" class="map">桃園國際機場</a></div>
+      </div>
+    </article></div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap"><span>美國西部自駕｜2027 春季</span><a href="#top">回到頂端 ↑</a></div>
+</footer>
+<script>
+(() => {
+  const track = document.querySelector('.timeline');
+  const days = [...track.querySelectorAll('.day')];
+  const tabs = [...document.querySelectorAll('.day-nav a')];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let active = -1;
+  const select = (index) => {
+    if (index === active) return;
+    active = index;
+    tabs.forEach((tab, i) => {
+      if (i === index) tab.setAttribute('aria-current', 'date');
+      else tab.removeAttribute('aria-current');
+    });
+  };
+  const go = (index, smooth = true) => {
+    if (index < 0) return;
+    track.scrollTo({ left: days[index].offsetLeft - days[0].offsetLeft,
+      behavior: smooth && !reducedMotion.matches ? 'smooth' : 'auto' });
+    select(index);
+  };
+  tabs.forEach((tab, i) => tab.addEventListener('click', (event) => {
+    event.preventDefault();
+    history.pushState(null, '', tab.hash);
+    go(i);
+  }));
+  let scheduled = false;
+  track.addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      select(Math.max(0, Math.min(days.length - 1,
+        Math.round(track.scrollLeft / track.clientWidth))));
+      scheduled = false;
+    });
+  }, { passive: true });
+  window.addEventListener('hashchange', () => {
+    const index = days.findIndex((day) => `#${day.id}` === location.hash);
+    go(index);
+  });
+  const initial = days.findIndex((day) => `#${day.id}` === location.hash);
+  go(initial < 0 ? 0 : initial, false);
+})();
+</script>
+</body>
+</html>
