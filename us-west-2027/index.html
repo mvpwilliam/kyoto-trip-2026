@@ -69,7 +69,7 @@ td { font-variant-numeric: tabular-nums; }
 .section-head .eyebrow { color: var(--rust); }
 .section-head h2 { font: 800 clamp(1.85rem, 6vw, 2.8rem)/1.25 var(--display); margin: .12em 0 .25em; }
 .section-head p { color: var(--sub); font-size: .89rem; }
-.day-nav { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin: 16px 0 21px; }
+.day-nav { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; margin: 16px 0 21px; }
 .day-nav a { text-align: center; padding: .45rem .1rem; border: 1px solid var(--edge); border-radius: 999px; text-decoration: none; font-size: .81rem; font-weight: 750; background: var(--card); font-variant-numeric: tabular-nums; }
 .day-nav a:hover, .day-nav a:focus-visible { background: #f4dfc9; border-color: #ae7954; }
 .day-nav a[aria-current="date"] { color: #fff; background: var(--rust); border-color: var(--rust); }
@@ -248,7 +248,7 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
       <h2 id="itinerary-title">每日行程</h2>
       <p>左右滑動切換每日行程，也可點上方日期直接跳轉。點景點名稱或照片，開啟 Google Maps。</p>
     </header>
-    <nav class="day-nav" aria-label="按日期跳至行程"><a href="#day-1" aria-label="第 1 天，03/26">03/26</a><a href="#day-2" aria-label="第 2 天，03/27">03/27</a><a href="#day-3" aria-label="第 3 天，03/28">03/28</a><a href="#day-4" aria-label="第 4 天，03/29">03/29</a><a href="#day-5" aria-label="第 5 天，03/30">03/30</a><a href="#day-6" aria-label="第 6 天，03/31">03/31</a><a href="#day-7" aria-label="第 7 天，04/01">04/01</a><a href="#day-8" aria-label="第 8 天，04/02">04/02</a><a href="#day-9" aria-label="第 9 天，04/03">04/03</a><a href="#day-10" aria-label="第 10 天，04/04">04/04</a><a href="#day-11" aria-label="第 11 天，04/05">04/05</a><a href="#day-12" aria-label="第 12 天，04/06">04/06</a><a href="#day-13" aria-label="第 13 天，04/07">04/07</a></nav>
+    <nav class="day-nav" aria-label="按日期跳至行程"><a href="#day-1" aria-label="第 1 天，03/26">03/26</a><a href="#day-2" aria-label="第 2 天，03/27">03/27</a><a href="#day-3" aria-label="第 3 天，03/28">03/28</a><a href="#day-4" aria-label="第 4 天，03/29">03/29</a><a href="#day-5" aria-label="第 5 天，03/30">03/30</a><a href="#day-6" aria-label="第 6 天，03/31">03/31</a><a href="#day-7" aria-label="第 7 天，04/01">04/01</a><a href="#day-8" aria-label="第 8 天，04/02">04/02</a><a href="#day-9" aria-label="第 9 天，04/03">04/03</a><a href="#day-10" aria-label="第 10 天，04/04">04/04</a><a href="#day-11" aria-label="第 11 天，04/05">04/05</a><a href="#day-12" aria-label="第 12、13 天，04/06 至 04/07">4/6–7</a></nav>
     <div class="timeline" tabindex="0" aria-label="每日行程，可左右滑動切換日期"><article class="day" id="day-1" aria-labelledby="heading-1">
       <div class="day-date"><span>DAY 01</span><time datetime="2027-03-26">03/26<small>（五）</small></time></div>
       <div class="day-body">
@@ -403,23 +403,12 @@ figcaption { display: flex; gap: .15rem .75rem; align-items: baseline; flex-wrap
       </div>
     </article>
 <article class="day" id="day-12" aria-labelledby="heading-12">
-      <div class="day-date"><span>DAY 12</span><time datetime="2027-04-06">04/06<small>（二）</small></time></div>
+      <div class="day-date"><span>DAY 12–13</span><time datetime="2027-04-06">04/06<small>（二）</small><br>04/07<small>（三）</small></time></div>
       <div class="day-body">
-        <span class="tag">飛行中</span>
-        <h3 id="heading-12">凌晨搭機，跨越國際換日線</h3>
-        <p class="day-copy">洛杉磯當地 00:05 起飛，直飛桃園；機上約 14 小時 20 分鐘，台灣當地於隔天 4/7 清晨抵達。4/5 晚上就須完成還車與報到。</p>
-        <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Los+Angeles+International+Airport%2C+CA" target="_blank" rel="noopener noreferrer" class="map">洛杉磯國際機場</a></div>
-        
-        
-      </div>
-    </article>
-<article class="day" id="day-13" aria-labelledby="heading-13">
-      <div class="day-date"><span>DAY 13</span><time datetime="2027-04-07">04/07<small>（三）</small></time></div>
-      <div class="day-body">
-        <span class="tag">抵台・休息</span>
-        <h3 id="heading-13">05:25 抵達桃園，回家調整時差</h3>
-        <p class="day-copy">清晨入境、領行李後返家。這天請假讓大人和孩子休息，白天接觸日光，若疲倦可短暫午睡，晚上盡量按台灣作息就寢；4/8 再上班上學。</p>
-        <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan+Taoyuan+International+Airport" target="_blank" rel="noopener noreferrer" class="map">桃園國際機場</a></div>
+        <span class="tag">飛行中・抵台休息</span>
+        <h3 id="heading-12">凌晨搭機，4/7 清晨抵台</h3>
+        <p class="day-copy">4/5 晚上完成還車與報到；洛杉磯當地 4/6 00:05 起飛，直飛桃園，跨越國際換日線。台灣時間 4/7 05:25 抵達，入境、領行李後返家。這天請假讓大人和孩子休息，白天接觸日光，若疲倦可短暫午睡，晚上盡量按台灣作息就寢；4/8 再上班上學。</p>
+        <div class="places"><a href="https://www.google.com/maps/search/?api=1&amp;query=Los+Angeles+International+Airport%2C+CA" target="_blank" rel="noopener noreferrer" class="map">洛杉磯國際機場</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Taiwan+Taoyuan+International+Airport" target="_blank" rel="noopener noreferrer" class="map">桃園國際機場</a></div>
       </div>
     </article></div>
   </section>
